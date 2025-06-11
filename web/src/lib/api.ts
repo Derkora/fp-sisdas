@@ -1,0 +1,1 @@
+export const baseURL = import.meta.env.VITE_PUBLIC_API_URL_PROD;

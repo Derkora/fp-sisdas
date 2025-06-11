@@ -1,0 +1,7 @@
+{
+  "name": "fp-sisdas-project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

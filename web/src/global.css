@@ -1,0 +1,35 @@
+/* maps on android only work with below style */
+
+body {
+  background: transparent !important;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+ion-app,
+ion-router-outlet,
+ion-page,
+ion-content,
+.ion-page,
+.split-pane,
+.outer-content {
+  overflow-x: hidden !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div.ion-page.map ion-content {
+  --background: none;
+}
+:root {
+  --swiper-theme-color: var(--ion-color-primary);
+}
+
+.toast-multiline {
+  white-space: pre-line;
+  text-align: left;
+  font-size: 14px;
+}
