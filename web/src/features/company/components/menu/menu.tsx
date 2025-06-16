@@ -15,10 +15,10 @@ import {
 import { IonMenuStyle, LogoWrapper, SubMenuItemLine } from './menu.styled';
 import { useAppPages } from '../../api/get-app-pages';
 import { caretDownOutline, caretUpOutline } from 'ionicons/icons';
-import { useLogout } from '@/lib/auth';
+// import { useLogout } from '@/lib/auth';
 
 export const Menu: React.FC = () => {
-  const logout = useLogout();
+  // const logout = useLogout();
   const router = useIonRouter();
   const location = useLocation();
   const appPages = useAppPages();

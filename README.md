@@ -18,7 +18,7 @@ dengan informasi
 akses mqtt
 ```sh
 mosquitto_sub -h 192.168.213.78 -p 2050 -t esp32/sensor/suhu
-mosquitto_sub -h 192.168.213.78 -p 2050 -t esp32/sensor/kelembapan
+mosquitto_sub -h 192.168.213.78 -p 2050 -t esp32/sensor/kelembaban
 ```
 
 tembak ke topic ini untuk relay

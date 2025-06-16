@@ -86,10 +86,10 @@ void callback(char* topic, byte* message, unsigned int length) {
   Serial.print("MQTT Message ["); Serial.print(topic); Serial.print("]: "); Serial.println(msg);
 
   if (String(topic) == mqtt_topic_sub) {
-    if (msg == "ON") {
+    if (msg == "1") {
       relayStatus = true;
       digitalWrite(RELAY_PIN, HIGH);
-    } else if (msg == "OFF") {
+    } else if (msg == "0") {
       relayStatus = false;
       digitalWrite(RELAY_PIN, LOW);
     }

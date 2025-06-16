@@ -1,8 +1,8 @@
 import { IonApp, IonSpinner, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Route } from 'react-router-dom';
-import { Login } from './pages/auth/Login';
-import { AuthLoader, ProtectedRoute } from './lib/auth';
+// import { Login } from './pages/auth/Login';
+// import { AuthLoader, ProtectedRoute } from './lib/auth';
 import { TableTemplate } from './components/TableTemplate';
 
 /* Core CSS required for Ionic components to work properly */
@@ -42,7 +42,7 @@ import React, { useEffect, useState } from 'react';
 // import LoadingPage from './features/loading/LoadingPage';
 import { Capacitor } from '@capacitor/core';
 import { Suspense } from 'react';
-const Registrasi = React.lazy(() => import('./pages/auth/Registrasi'));
+// const Registrasi = React.lazy(() => import('./pages/auth/Registrasi'));
 
 setupIonicReact();
 
@@ -100,24 +100,15 @@ const App: React.FC = () => {
       <GlobalStyle />
       <IonApp>
         <IonReactRouter>
-          <AuthLoader
-            renderLoading={() => (isNative ? <></> : <IonSpinner />)}
-          >
-            {/* <Route
-              path="/"
-              exact={true}
-              render={() => {
-                return role ? <Redirect to="/app" /> : <Redirect to="/auth/login" />;
-              }}
-            /> */}
-            <Route path="/auth/login" exact>
+        {/* <Route path="/auth/login" exact>
               <Login />
             </Route>
             <Route path="/auth/registrasi" exact>
               <Registrasi />
-            </Route>
+            </Route> */}
 
-            <ProtectedRoute>
+            {/* <ProtectedRoute>
+            </ProtectedRoute> */}
               {flattenedRoutes.map((route) => {
                 return (
                   <Route key={route.url} path={route.url} exact>
@@ -125,12 +116,6 @@ const App: React.FC = () => {
                   </Route>
                 )
               })}
-            </ProtectedRoute>
-
-            {/* <Route path="*">
-              <Redirect to="/app" />
-            </Route> */}
-          </AuthLoader>
         </IonReactRouter>
       </IonApp>
     </Suspense>
