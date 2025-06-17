@@ -12,7 +12,7 @@ int mqtt_port = 2050;
 const char* mqtt_topic_pub_suhu = "esp32/sensor/suhu";
 const char* mqtt_topic_pub_kelembaban = "esp32/sensor/kelembaban";
 const char* mqtt_topic_sub = "esp32/relay/control";
-String mqtt_server = "192.168.213.78";  // ← GANTI dengan IP broker MQTT milikmu
+String mqtt_server = "";  // ← GANTI dengan IP broker MQTT milikmu
 
 // ===== NTP Config =====
 const char* ntpServer = "pool.ntp.org";
