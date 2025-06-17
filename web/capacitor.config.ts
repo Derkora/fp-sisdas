@@ -9,7 +9,7 @@ const config: CapacitorConfig = {
       resize: 'body'
     },
     LocalNotifications: {
-      smallIcon: "ic_stat_attenda_logo",
+      smallIcon: "ic_stat_logo",
       iconColor: "#488AFF",
     },
     GPSPlugin: {}

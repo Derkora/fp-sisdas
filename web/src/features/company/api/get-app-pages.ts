@@ -1,22 +1,15 @@
-import { AppPage } from '@/types/api';
+import { AppPage } from '@/types/api'
 import {
-  cameraOutline,
-  homeOutline,
-  mapOutline,
-  people,
-  personOutline,
-  schoolOutline,
-  timeOutline,
-  warningOutline,
-  diamondSharp
+  diamondSharp,
+  appsOutline
 } from 'ionicons/icons';
 import DashboardSisdas from '@/pages/sisdas/DashboardSisdas';
-import DashboardAlat from '@/pages/sisdas/DashboardAlat';
+import DashboardFromSupabase from '@/pages/sisdas/DashboardFromSupabase';
 
 export const useAppPages = () => {
   const appPages: AppPage[] = [
     { title: 'Dashboard IoT', url: '/dashboard-iot', icon: diamondSharp, page: DashboardSisdas },
-    // { title: 'Data Alat', url: '/data-alat', icon: personOutline, page: DashboardAlat },
+    { title: 'Database', url: '/from-database', icon: appsOutline, page: DashboardFromSupabase },
   ];
 
   return appPages;

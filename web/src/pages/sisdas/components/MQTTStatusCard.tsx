@@ -1,7 +1,7 @@
 import { IonText } from '@ionic/react'
 
 interface Props {
-    status: 'connected' | 'disconnected'
+    status: string
     host: string
     port: number
 }

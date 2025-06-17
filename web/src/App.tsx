@@ -1,4 +1,4 @@
-import { IonApp, IonSpinner, setupIonicReact } from '@ionic/react';
+import { IonApp, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Route } from 'react-router-dom';
 // import { Login } from './pages/auth/Login';
@@ -83,7 +83,7 @@ const App: React.FC = () => {
     }
   }, [isNative]);
 
-  const flattenedRoutes = appPages.flatMap((page) => [page, ...(page.children || [])]);
+  const flattenedRoutes = appPages.flatMap((page) => [page, ...(page.children ?? [])]);
 
   return (
     <Suspense fallback={
@@ -100,22 +100,13 @@ const App: React.FC = () => {
       <GlobalStyle />
       <IonApp>
         <IonReactRouter>
-        {/* <Route path="/auth/login" exact>
-              <Login />
-            </Route>
-            <Route path="/auth/registrasi" exact>
-              <Registrasi />
-            </Route> */}
-
-            {/* <ProtectedRoute>
-            </ProtectedRoute> */}
-              {flattenedRoutes.map((route) => {
-                return (
-                  <Route key={route.url} path={route.url} exact>
-                    {route.page ? <route.page {...route} /> : <TableTemplate {...route} />}
-                  </Route>
-                )
-              })}
+          {flattenedRoutes.map((route) => {
+            return (
+              <Route key={route.url} path={route.url} exact>
+                {route.page ? <route.page {...route} /> : <TableTemplate {...route} />}
+              </Route>
+            )
+          })}
         </IonReactRouter>
       </IonApp>
     </Suspense>
