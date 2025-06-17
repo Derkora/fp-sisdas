@@ -1,5 +1,15 @@
 # sisdas
 
+
+FINAL PROJECT SISTEM CERDAS - KELOMPOK 9
+| NRP | Nama |
+| ------ | ------ |
+| 5027221005 | Bhisma Elki Pratama |
+| 5027221014 | Siti Nur Ellyzah |
+| 5027221021 | Steven FIgo |
+| 5027221030 | Atha Rahma Arianti |
+| 5027221035 | Azzahra Sekar Rahmadina |
+
 jalankan mqtt
 
 ```sh
